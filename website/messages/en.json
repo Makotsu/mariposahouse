@@ -1,0 +1,232 @@
+{
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "worship": "Faith & Worship",
+    "news": "News",
+    "contact": "Contact",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageSelector": "Select language"
+  },
+  "Home": {
+    "hero": {
+      "title": "Mariposa House",
+      "subtitle": "Mariposa House Church",
+      "tagline": "Transformation and New Life - Like a Butterfly",
+      "description": "Sharing the joy of being made new in Christ",
+      "ctaWorship": "Worship Info",
+      "ctaFirstVisit": "First Visit",
+      "ctaContact": "Contact Us"
+    },
+    "news": {
+      "title": "News & Updates",
+      "viewAll": "View All",
+      "noNews": "No news available"
+    },
+    "worship": {
+      "title": "Worship Service",
+      "description": "Every Sunday, we gather online to worship God together, study His Word, and enjoy fellowship. Everyone is welcome!",
+      "time": "Every Sunday 10:00 AM - 12:00 PM (Online)",
+      "details": "Learn More"
+    },
+    "cta": {
+      "title": "We're Waiting for You",
+      "description": "Mariposa House welcomes everyone. Let's worship together, grow together, and share God's love together.",
+      "contact": "Contact Us"
+    }
+  },
+  "About": {
+    "pageTitle": "About Us",
+    "pageSubtitle": "About Mariposa House",
+    "welcome": {
+      "title": "Welcome to Mariposa House",
+      "description": "Mariposa House is a community sharing the joy of becoming 'a new creation' in Christ."
+    },
+    "mariposa": {
+      "title": "The Meaning of 'Mariposa'",
+      "description": "Mariposa means 'butterfly' in Spanish. The butterfly transforms from a caterpillar through a chrysalis into a beautiful butterfly, symbolizing our faith journey of being transformed and made new in Christ."
+    },
+    "scriptures": {
+      "title": "Core Scriptures"
+    }
+  },
+  "Worship": {
+    "pageTitle": "Faith & Worship",
+    "pageSubtitle": "Faith & Worship",
+    "beliefs": {
+      "title": "What We Believe",
+      "bible": {
+        "title": "The Bible",
+        "description": "The Bible is the inspired Word of God and the sole authority for faith and practice."
+      },
+      "trinity": {
+        "title": "The Trinity",
+        "description": "We believe in one God eternally existing in three persons: Father, Son, and Holy Spirit."
+      },
+      "jesus": {
+        "title": "Jesus Christ",
+        "description": "Jesus Christ is the Son of God, born of the Virgin Mary, died on the cross for our sins, and rose again on the third day."
+      },
+      "salvation": {
+        "title": "Salvation",
+        "description": "All people are sinners and can only be saved by faith in Jesus Christ."
+      },
+      "holySpirit": {
+        "title": "The Holy Spirit",
+        "description": "The Holy Spirit dwells in believers, guiding and empowering them."
+      }
+    },
+    "service": {
+      "title": "Sunday Worship",
+      "time": "Every Sunday 10:00 AM - 12:00 PM",
+      "format": "Online",
+      "description": "We worship God together through praise, prayer, Bible teaching, and fellowship."
+    },
+    "gatherings": {
+      "title": "Other Gatherings",
+      "shirHashirim": {
+        "title": "Shir ha-Shirim",
+        "description": "A gathering of praise and prayer. 'Shir ha-Shirim' means 'Song of Songs' in Hebrew."
+      },
+      "prayer": {
+        "title": "Prayer Meeting",
+        "description": "A time to pray together and intercede for one another."
+      },
+      "smallGroup": {
+        "title": "Small Groups",
+        "description": "Smaller groups for deeper fellowship and study."
+      }
+    },
+    "discipleship": {
+      "title": "Mathetai Matheteushin (Discipleship)",
+      "description": "'Mathetai' means 'disciples' in Greek, and 'Matheteushin' means 'to make disciples.' We are called to grow as disciples of Jesus and to make disciples of others.",
+      "traits": {
+        "title": "Characteristics of a Disciple",
+        "obedience": "Following Jesus",
+        "scripture": "Studying God's Word",
+        "prayer": "A life of prayer",
+        "fellowship": "Valuing community"
+      }
+    },
+    "agape": {
+      "title": "Agape Love",
+      "description": "Agape means 'unconditional love' in Greek. Just as God loved us, we are called to love one another.",
+      "scripture": "A new command I give you: Love one another. As I have loved you, so you must love one another.",
+      "reference": "John 13:34"
+    }
+  },
+  "News": {
+    "pageTitle": "News",
+    "pageSubtitle": "News & Updates",
+    "readMore": "Read More",
+    "backToList": "Back to News",
+    "noNews": "No news available"
+  },
+  "Contact": {
+    "pageTitle": "Contact Us",
+    "pageSubtitle": "Contact Us",
+    "intro": "If you have any questions or inquiries, please feel free to contact us.",
+    "scripture": "Ask and it will be given to you; seek and you will find; knock and the door will be opened to you.",
+    "scriptureRef": "Matthew 7:7",
+    "form": {
+      "title": "Send a Message",
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "email": "Email",
+      "emailPlaceholder": "example@email.com",
+      "subject": "Subject",
+      "subjectOptions": {
+        "select": "Please select",
+        "worship": "Want to attend worship",
+        "question": "Question / Consultation",
+        "prayer": "Prayer request",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Please enter your message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "required": "*"
+    },
+    "success": {
+      "title": "Message Sent",
+      "message": "Thank you for your inquiry. We will get back to you soon.",
+      "sendAnother": "Send another message"
+    },
+    "error": {
+      "title": "Error",
+      "message": "Failed to send message. Please try again later.",
+      "retry": "Retry"
+    },
+    "info": {
+      "title": "Contact Information",
+      "email": "Email",
+      "worshipTime": "Worship Time",
+      "worshipSchedule": "Every Sunday 10:00 AM - 12:00 PM"
+    },
+    "access": {
+      "title": "Access",
+      "online": "Online Worship",
+      "onlineDescription": "We currently hold worship services online. Please contact us for details on how to join."
+    }
+  },
+  "Privacy": {
+    "pageTitle": "Privacy Policy",
+    "pageSubtitle": "Privacy Policy",
+    "lastUpdated": "Last Updated",
+    "intro": "Mariposa House (hereinafter 'the Church') recognizes the importance of personal information and strives to protect it.",
+    "sections": {
+      "collection": {
+        "title": "1. Collection of Personal Information",
+        "content": "The Church may collect personal information such as name, email address, and inquiry content through our contact form."
+      },
+      "use": {
+        "title": "2. Purpose of Use",
+        "content": "The collected personal information will be used for the following purposes:",
+        "purposes": [
+          "Responding to inquiries",
+          "Communication regarding church activities",
+          "Information about worship services and events"
+        ]
+      },
+      "thirdParty": {
+        "title": "3. Disclosure to Third Parties",
+        "content": "The Church will not provide personal information to third parties without prior consent, except as required by law."
+      },
+      "cookies": {
+        "title": "4. Use of Cookies",
+        "content": "This website may use cookies to improve user experience. You can disable cookies in your browser settings."
+      },
+      "security": {
+        "title": "5. Security",
+        "content": "The Church takes appropriate security measures to prevent leakage, loss, or alteration of personal information."
+      },
+      "contact": {
+        "title": "6. Contact",
+        "content": "For inquiries regarding the handling of personal information, please contact us through our contact form."
+      },
+      "changes": {
+        "title": "7. Changes to Privacy Policy",
+        "content": "The Church may change this policy as necessary. The revised policy will take effect when posted on this website."
+      }
+    }
+  },
+  "Footer": {
+    "description": "Sharing the joy of being made new in Christ",
+    "navigation": "Navigation",
+    "contact": "Contact",
+    "worshipTime": "Worship Time",
+    "worshipSchedule": "Every Sunday 10:00 AM - 12:00 PM",
+    "privacy": "Privacy Policy",
+    "copyright": "All rights reserved."
+  },
+  "Common": {
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "backToTop": "Back to Top",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "required": "*"
+  }
+}

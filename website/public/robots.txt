@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://mariposahouse.church
+
+# Sitemaps
+Sitemap: https://mariposahouse.church/sitemap.xml

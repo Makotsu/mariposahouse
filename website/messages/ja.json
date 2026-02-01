@@ -1,0 +1,232 @@
+{
+  "Navigation": {
+    "home": "ホーム",
+    "about": "私たちについて",
+    "worship": "信仰と礼拝",
+    "news": "お知らせ",
+    "contact": "お問い合わせ",
+    "openMenu": "メニューを開く",
+    "closeMenu": "メニューを閉じる",
+    "languageSelector": "言語を選択"
+  },
+  "Home": {
+    "hero": {
+      "title": "Mariposa House",
+      "subtitle": "マリポサハウス",
+      "tagline": "変容と新生 — 蝶のように生まれ変わる",
+      "description": "キリストにあって新しく造られる喜びを分かち合う",
+      "ctaWorship": "礼拝のご案内",
+      "ctaFirstVisit": "はじめての方へ",
+      "ctaContact": "お問い合わせ"
+    },
+    "news": {
+      "title": "お知らせ",
+      "viewAll": "すべて見る",
+      "noNews": "お知らせはありません"
+    },
+    "worship": {
+      "title": "礼拝のご案内",
+      "description": "毎週日曜日、オンラインで共に神様を礼拝し、み言葉を学び、交わりの時を持っています。初めての方も大歓迎です。",
+      "time": "毎週日曜日 10:00 - 12:00（オンライン）",
+      "details": "詳しく見る"
+    },
+    "cta": {
+      "title": "あなたをお待ちしています",
+      "description": "マリポサハウスは、すべての人を歓迎します。共に礼拝し、共に成長し、共に神の愛を分かち合いましょう。",
+      "contact": "お問い合わせ"
+    }
+  },
+  "About": {
+    "pageTitle": "私たちについて",
+    "pageSubtitle": "About Mariposa House",
+    "welcome": {
+      "title": "ようこそ、マリポサハウスへ",
+      "description": "マリポサハウスは、キリストにあって「新しく造られた者」となる喜びを分かち合うコミュニティです。"
+    },
+    "mariposa": {
+      "title": "「マリポサ」の意味",
+      "description": "マリポサ（Mariposa）はスペイン語で「蝶」を意味します。蝶は幼虫から蛹を経て美しい蝶へと変容する生き物であり、これはキリストにあって新しく造り変えられる私たちの信仰の旅路を象徴しています。"
+    },
+    "scriptures": {
+      "title": "中心となる聖句"
+    }
+  },
+  "Worship": {
+    "pageTitle": "信仰と礼拝",
+    "pageSubtitle": "Faith & Worship",
+    "beliefs": {
+      "title": "私たちの信じること",
+      "bible": {
+        "title": "聖書",
+        "description": "聖書は神の霊感によって書かれた、信仰と生活の唯一の規範です。"
+      },
+      "trinity": {
+        "title": "三位一体の神",
+        "description": "父なる神、子なる神イエス・キリスト、聖霊なる神の三位一体の神を信じます。"
+      },
+      "jesus": {
+        "title": "イエス・キリスト",
+        "description": "イエス・キリストは神の御子であり、処女マリアから生まれ、十字架で私たちの罪のために死に、三日目に復活されました。"
+      },
+      "salvation": {
+        "title": "救い",
+        "description": "人は罪人であり、イエス・キリストを信じる信仰によってのみ救われます。"
+      },
+      "holySpirit": {
+        "title": "聖霊",
+        "description": "聖霊は信じる者の内に住み、導き、力を与えてくださいます。"
+      }
+    },
+    "service": {
+      "title": "日曜礼拝",
+      "time": "毎週日曜日 10:00 - 12:00",
+      "format": "オンライン",
+      "description": "賛美、祈り、聖書のメッセージ、交わりの時間を通して、共に神様を礼拝します。"
+    },
+    "gatherings": {
+      "title": "その他の集会",
+      "shirHashirim": {
+        "title": "Shir ha-Shirim（シール・ハ・シリーム）",
+        "description": "ヘブライ語で「雅歌」を意味する賛美と祈りの集会です。"
+      },
+      "prayer": {
+        "title": "祈祷会",
+        "description": "共に祈り、互いのために執り成す時間です。"
+      },
+      "smallGroup": {
+        "title": "小グループ",
+        "description": "より深い交わりと学びのための少人数のグループです。"
+      }
+    },
+    "discipleship": {
+      "title": "マテタイ・マテテウシン（弟子訓練）",
+      "description": "「マテタイ」はギリシャ語で「弟子」、「マテテウシン」は「弟子とする」を意味します。私たちはイエス様の弟子として成長し、また他の人々を弟子とするために召されています。",
+      "traits": {
+        "title": "弟子の特徴",
+        "obedience": "イエス様に従う",
+        "scripture": "み言葉を学ぶ",
+        "prayer": "祈りの生活",
+        "fellowship": "交わりを大切にする"
+      }
+    },
+    "agape": {
+      "title": "アガペーの愛",
+      "description": "アガペーはギリシャ語で「無条件の愛」を意味します。神様が私たちを愛されたように、私たちも互いに愛し合うことが召命です。",
+      "scripture": "わたしはあなたがたに新しい戒めを与えます。互いに愛し合いなさい。わたしがあなたがたを愛したように、あなたがたも互いに愛し合いなさい。",
+      "reference": "ヨハネ 13:34"
+    }
+  },
+  "News": {
+    "pageTitle": "お知らせ",
+    "pageSubtitle": "News & Updates",
+    "readMore": "続きを読む",
+    "backToList": "お知らせ一覧に戻る",
+    "noNews": "お知らせはありません"
+  },
+  "Contact": {
+    "pageTitle": "お問い合わせ",
+    "pageSubtitle": "Contact Us",
+    "intro": "ご質問やお問い合わせがございましたら、お気軽にご連絡ください。",
+    "scripture": "求めなさい。そうすれば与えられます。探しなさい。そうすれば見つかります。たたきなさい。そうすれば開かれます。",
+    "scriptureRef": "マタイ 7:7",
+    "form": {
+      "title": "メッセージを送る",
+      "name": "お名前",
+      "namePlaceholder": "山田 太郎",
+      "email": "メールアドレス",
+      "emailPlaceholder": "example@email.com",
+      "subject": "件名",
+      "subjectOptions": {
+        "select": "選択してください",
+        "worship": "礼拝に参加したい",
+        "question": "質問・相談",
+        "prayer": "祈りのリクエスト",
+        "other": "その他"
+      },
+      "message": "メッセージ",
+      "messagePlaceholder": "お問い合わせ内容をご記入ください",
+      "submit": "送信する",
+      "sending": "送信中...",
+      "required": "*"
+    },
+    "success": {
+      "title": "送信完了",
+      "message": "お問い合わせありがとうございます。担当者より折り返しご連絡いたします。",
+      "sendAnother": "別のメッセージを送る"
+    },
+    "error": {
+      "title": "送信エラー",
+      "message": "送信に失敗しました。時間をおいて再度お試しください。",
+      "retry": "再試行"
+    },
+    "info": {
+      "title": "連絡先情報",
+      "email": "メール",
+      "worshipTime": "礼拝時間",
+      "worshipSchedule": "毎週日曜日 10:00 - 12:00"
+    },
+    "access": {
+      "title": "アクセス",
+      "online": "オンライン礼拝",
+      "onlineDescription": "現在はオンラインで礼拝を行っています。参加方法については、お問い合わせください。"
+    }
+  },
+  "Privacy": {
+    "pageTitle": "プライバシーポリシー",
+    "pageSubtitle": "Privacy Policy",
+    "lastUpdated": "最終更新日",
+    "intro": "マリポサハウス（以下「当教会」）は、個人情報の重要性を認識し、その保護に努めています。",
+    "sections": {
+      "collection": {
+        "title": "1. 個人情報の収集",
+        "content": "当教会は、お問い合わせフォームを通じて、お名前、メールアドレス、お問い合わせ内容などの個人情報を収集することがあります。"
+      },
+      "use": {
+        "title": "2. 個人情報の利用目的",
+        "content": "収集した個人情報は、以下の目的で利用いたします：",
+        "purposes": [
+          "お問い合わせへの回答",
+          "教会活動に関するご連絡",
+          "礼拝や各種イベントのご案内"
+        ]
+      },
+      "thirdParty": {
+        "title": "3. 第三者への提供",
+        "content": "当教会は、法令に基づく場合を除き、事前の同意なく個人情報を第三者に提供することはありません。"
+      },
+      "cookies": {
+        "title": "4. Cookieの使用",
+        "content": "当ウェブサイトでは、ユーザー体験の向上のためにCookieを使用する場合があります。Cookieはブラウザの設定で無効にすることができます。"
+      },
+      "security": {
+        "title": "5. セキュリティ",
+        "content": "当教会は、個人情報の漏洩、紛失、改ざんを防ぐため、適切なセキュリティ対策を講じています。"
+      },
+      "contact": {
+        "title": "6. お問い合わせ",
+        "content": "個人情報の取り扱いに関するお問い合わせは、お問い合わせフォームよりご連絡ください。"
+      },
+      "changes": {
+        "title": "7. プライバシーポリシーの変更",
+        "content": "当教会は、必要に応じて本ポリシーを変更することがあります。変更後のポリシーは、当ウェブサイトに掲載した時点で効力を生じます。"
+      }
+    }
+  },
+  "Footer": {
+    "description": "キリストにあって新しく造られる喜びを分かち合う",
+    "navigation": "ナビゲーション",
+    "contact": "お問い合わせ",
+    "worshipTime": "礼拝時間",
+    "worshipSchedule": "毎週日曜日 10:00 - 12:00",
+    "privacy": "プライバシーポリシー",
+    "copyright": "All rights reserved."
+  },
+  "Common": {
+    "readMore": "続きを読む",
+    "learnMore": "詳しく見る",
+    "backToTop": "トップに戻る",
+    "loading": "読み込み中...",
+    "error": "エラーが発生しました",
+    "required": "*"
+  }
+}

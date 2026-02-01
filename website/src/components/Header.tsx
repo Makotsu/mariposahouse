@@ -2,26 +2,52 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
-
-const navigation = [
-  { name: "ホーム", nameEn: "Home", href: "/" },
-  { name: "私たちについて", nameEn: "About", href: "/about" },
-  { name: "信仰と礼拝", nameEn: "Faith & Worship", href: "/worship" },
-  { name: "お知らせ", nameEn: "News", href: "/news" },
-  { name: "お問い合わせ", nameEn: "Contact", href: "/contact" },
-];
+import { useState, useEffect } from "react";
+import { useTranslations, useLocale } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [lang, setLang] = useState<"ja" | "en">("ja");
+  const [isScrolled, setIsScrolled] = useState(false);
+  const t = useTranslations('Navigation');
+  const locale = useLocale();
+  const pathname = usePathname();
+  const router = useRouter();
+
+  const navigation = [
+    { name: t('home'), href: `/${locale}` },
+    { name: t('about'), href: `/${locale}/about` },
+    { name: t('worship'), href: `/${locale}/worship` },
+    { name: t('news'), href: `/${locale}/news` },
+    { name: t('contact'), href: `/${locale}/contact` },
+  ];
+
+  // Scroll detection for background blur
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  // Language switch handler
+  const switchLocale = (newLocale: string) => {
+    const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
+    router.push(`/${newLocale}${pathWithoutLocale}`);
+    setIsOpen(false);
+  };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-100">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 border-b border-gray-100 transition-all duration-300 ${
+        isScrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-white'
+      }`}
+    >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="flex items-center gap-2">
             <Image
               src="/butterfly.png"
               alt="Mariposa"
@@ -42,21 +68,27 @@ export default function Header() {
                 href={item.href}
                 className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
               >
-                {lang === "ja" ? item.name : item.nameEn}
+                {item.name}
               </Link>
             ))}
 
             {/* Language Toggle */}
-            <div className="lang-toggle ml-2">
+            <div
+              className="lang-toggle ml-2"
+              role="group"
+              aria-label={t('languageSelector')}
+            >
               <button
-                onClick={() => setLang("ja")}
-                className={lang === "ja" ? "active" : ""}
+                onClick={() => switchLocale('ja')}
+                className={locale === 'ja' ? 'active' : ''}
+                aria-pressed={locale === 'ja'}
               >
                 日本語
               </button>
               <button
-                onClick={() => setLang("en")}
-                className={lang === "en" ? "active" : ""}
+                onClick={() => switchLocale('en')}
+                className={locale === 'en' ? 'active' : ''}
+                aria-pressed={locale === 'en'}
               >
                 EN
               </button>
@@ -67,7 +99,9 @@ export default function Header() {
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-2 rounded hover:bg-gray-50 transition-colors"
-            aria-label="メニューを開く"
+            aria-label={isOpen ? t('closeMenu') : t('openMenu')}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
           >
             <svg
               className="w-5 h-5 text-gray-600"
@@ -96,7 +130,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isOpen && (
-          <div className="lg:hidden py-4 border-t border-gray-100">
+          <div id="mobile-menu" className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-1">
               {navigation.map((item) => (
                 <Link
@@ -105,20 +139,26 @@ export default function Header() {
                   onClick={() => setIsOpen(false)}
                   className="px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded transition-colors text-sm"
                 >
-                  {lang === "ja" ? item.name : item.nameEn}
+                  {item.name}
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <div className="lang-toggle inline-flex">
+                <div
+                  className="lang-toggle inline-flex"
+                  role="group"
+                  aria-label={t('languageSelector')}
+                >
                   <button
-                    onClick={() => setLang("ja")}
-                    className={lang === "ja" ? "active" : ""}
+                    onClick={() => switchLocale('ja')}
+                    className={locale === 'ja' ? 'active' : ''}
+                    aria-pressed={locale === 'ja'}
                   >
                     日本語
                   </button>
                   <button
-                    onClick={() => setLang("en")}
-                    className={lang === "en" ? "active" : ""}
+                    onClick={() => switchLocale('en')}
+                    className={locale === 'en' ? 'active' : ''}
+                    aria-pressed={locale === 'en'}
                   >
                     EN
                   </button>
