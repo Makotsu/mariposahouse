@@ -78,58 +78,64 @@ export default function ContactPage() {
             {t('intro')}
           </p>
 
-          {/* Error Message */}
+          {/* Error Message - アクセシビリティ向上: アイコンと大きな文字で明確に */}
           {status === 'error' && (
-            <div className="mb-6 p-4 bg-red-50 border border-red-200 rounded-lg">
-              <p className="text-red-600 text-base">{t('error.message')}</p>
+            <div className="mb-6 p-4 bg-red-50 border-2 border-red-300 rounded-lg flex items-start gap-3" role="alert">
+              <svg className="w-6 h-6 text-red-500 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+              <p className="text-red-700 text-lg font-medium">{t('error.message')}</p>
             </div>
           )}
 
           <form onSubmit={handleSubmit} className="space-y-5">
+            {/* アクセシビリティ向上: ラベルを大きく、入力欄を高く */}
             <div>
-              <label htmlFor="name" className="block text-base font-medium text-gray-700 mb-1">
-                {t('form.name')} <span className="text-red-500">{t('form.required')}</span>
+              <label htmlFor="name" className="block text-lg font-medium text-gray-700 mb-2">
+                {t('form.name')} <span className="text-red-600 font-bold" aria-label="必須">{t('form.required')}</span>
               </label>
               <input
                 type="text"
                 id="name"
                 name="name"
                 required
+                aria-required="true"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gray-200 focus:border-gray-400 transition-colors text-base"
+                className="w-full"
                 placeholder={t('form.namePlaceholder')}
                 disabled={status === 'submitting'}
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-base font-medium text-gray-700 mb-1">
-                {t('form.email')} <span className="text-red-500">{t('form.required')}</span>
+              <label htmlFor="email" className="block text-lg font-medium text-gray-700 mb-2">
+                {t('form.email')} <span className="text-red-600 font-bold" aria-label="必須">{t('form.required')}</span>
               </label>
               <input
                 type="email"
                 id="email"
                 name="email"
                 required
+                aria-required="true"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gray-200 focus:border-gray-400 transition-colors text-base"
+                className="w-full"
                 placeholder={t('form.emailPlaceholder')}
                 disabled={status === 'submitting'}
               />
             </div>
 
             <div>
-              <label htmlFor="subject" className="block text-base font-medium text-gray-700 mb-1">
-                {t('form.subject')}
+              <label htmlFor="subject" className="block text-lg font-medium text-gray-700 mb-2">
+                {t('form.subject')} <span className="text-gray-500 text-base font-normal">(任意)</span>
               </label>
               <select
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gray-200 focus:border-gray-400 transition-colors text-base"
+                className="w-full"
                 disabled={status === 'submitting'}
               >
                 <option value="">{t('form.subjectOptions.select')}</option>
@@ -141,17 +147,18 @@ export default function ContactPage() {
             </div>
 
             <div>
-              <label htmlFor="message" className="block text-base font-medium text-gray-700 mb-1">
-                {t('form.message')} <span className="text-red-500">{t('form.required')}</span>
+              <label htmlFor="message" className="block text-lg font-medium text-gray-700 mb-2">
+                {t('form.message')} <span className="text-red-600 font-bold" aria-label="必須">{t('form.required')}</span>
               </label>
               <textarea
                 id="message"
                 name="message"
                 required
+                aria-required="true"
                 rows={5}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full px-4 py-2.5 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gray-200 focus:border-gray-400 transition-colors resize-none text-base"
+                className="w-full resize-none"
                 placeholder={t('form.messagePlaceholder')}
                 disabled={status === 'submitting'}
               />

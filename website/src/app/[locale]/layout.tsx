@@ -111,11 +111,8 @@ export default async function LocaleLayout({
       </head>
       <body className={`${notoSans.variable} ${notoSerif.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
-          <a href="#main-content" className="skip-link">
-            {locale === 'ja' ? 'メインコンテンツへスキップ' : 'Skip to main content'}
-          </a>
           <Header />
-          <main id="main-content">{children}</main>
+          <main>{children}</main>
           <Footer />
         </NextIntlClientProvider>
       </body>

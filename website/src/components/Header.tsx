@@ -25,6 +25,14 @@ export default function Header() {
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
+  // 現在地を判定
+  const isActivePath = (href: string) => {
+    if (href === `/${locale}`) {
+      return pathname === `/${locale}` || pathname === `/${locale}/`;
+    }
+    return pathname.startsWith(href);
+  };
+
   const switchLocale = (newLocale: string) => {
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
     router.push(`/${newLocale}${pathWithoutLocale}`);
@@ -62,15 +70,15 @@ export default function Header() {
       )}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-18 py-2">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center gap-2">
+          <Link href={`/${locale}`} className="logo-link flex items-center gap-2 py-2">
             <Image
               src={IMAGES.butterfly}
               alt="Mariposa"
-              width={32}
-              height={32}
-              className="w-8 h-auto"
+              width={36}
+              height={36}
+              className="w-9 h-auto"
             />
             <span className="text-lg font-bold text-gray-900 font-serif">
               Mariposa House
@@ -78,29 +86,38 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden lg:flex items-center gap-6">
-            {navigation.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-base"
-              >
-                {item.name}
-              </Link>
-            ))}
-            <LanguageToggle className="ml-2" />
+          <div className="hidden lg:flex items-center gap-1">
+            {navigation.map((item) => {
+              const isActive = isActivePath(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={cn(
+                    'nav-link px-3 py-2 rounded-md transition-colors text-sm font-medium',
+                    isActive
+                      ? 'text-gray-900 bg-gray-100'
+                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                  )}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+            <LanguageToggle className="ml-1" />
           </div>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button - アクセシビリティ向上: タップ領域を48px以上に */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden p-2 rounded hover:bg-gray-50 transition-colors"
+            className="lg:hidden p-3 min-w-[48px] min-h-[48px] rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
             aria-label={isOpen ? t('closeMenu') : t('openMenu')}
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
           >
             <svg
-              className="w-5 h-5 text-gray-600"
+              className="w-6 h-6 text-gray-700"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -124,21 +141,30 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - アクセシビリティ向上: タップ領域拡大、現在地明示 */}
         {isOpen && (
           <div id="mobile-menu" className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-1">
-              {navigation.map((item) => (
-                <Link
-                  key={item.href}
-                  href={item.href}
-                  onClick={() => setIsOpen(false)}
-                  className="px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded transition-colors text-base"
-                >
-                  {item.name}
-                </Link>
-              ))}
-              <div className="px-3 py-2">
+              {navigation.map((item) => {
+                const isActive = isActivePath(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setIsOpen(false)}
+                    className={cn(
+                      'nav-link px-4 py-4 min-h-[48px] rounded-lg transition-colors text-base font-medium',
+                      isActive
+                        ? 'text-gray-900 bg-gray-100 border-l-4 border-gray-900'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                    )}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    {item.name}
+                  </Link>
+                );
+              })}
+              <div className="px-4 py-4">
                 <LanguageToggle className="inline-flex" />
               </div>
             </div>

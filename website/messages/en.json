@@ -259,5 +259,11 @@
     "loading": "Loading...",
     "error": "An error occurred",
     "required": "*"
+  },
+  "Accessibility": {
+    "fontSizeSelector": "Select font size",
+    "fontSizeSmall": "Small font",
+    "fontSizeMedium": "Medium font",
+    "fontSizeLarge": "Large font"
   }
 }
