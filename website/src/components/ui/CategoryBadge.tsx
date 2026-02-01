@@ -14,7 +14,7 @@ export function CategoryBadge({
   return (
     <span
       className={cn(
-        'bg-gray-100 text-gray-600 text-xs font-medium',
+        'bg-gray-100 text-gray-600 text-base font-medium',
         variant === 'default' ? 'px-2 py-0.5 rounded' : 'px-3 py-1 rounded-full',
         className
       )}

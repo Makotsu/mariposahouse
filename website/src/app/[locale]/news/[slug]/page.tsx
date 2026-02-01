@@ -70,7 +70,7 @@ export default async function NewsDetailPage({
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Breadcrumb */}
           <nav className="mb-6" aria-label="Breadcrumb">
-            <ol className="flex items-center gap-2 text-sm">
+            <ol className="flex items-center gap-2 text-base">
               <li>
                 <Link href={`/${locale}`} className="text-gray-500 hover:text-gray-900 transition-colors">
                   {tNav('home')}
@@ -94,7 +94,7 @@ export default async function NewsDetailPage({
             {post.categories.map((cat) => (
               <span
                 key={cat.id}
-                className="px-3 py-1 bg-gray-200 text-gray-700 text-xs font-medium rounded-full"
+                className="px-3 py-1 bg-gray-200 text-gray-700 text-base font-medium rounded-full"
               >
                 {cat.name}
               </span>

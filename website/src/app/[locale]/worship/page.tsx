@@ -45,8 +45,8 @@ export default async function WorshipPage({
       {/* Core Beliefs */}
       <Section variant="gray">
         <Container size="sm">
-          <div className="text-center mb-16">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
+          <div className="text-center mb-10">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-3">
               {t('beliefs.title')}
             </h2>
             <p className="text-gray-600">{t('beliefs.intro')}</p>
@@ -58,7 +58,7 @@ export default async function WorshipPage({
                 <h3 className="font-bold text-gray-900 mb-3">
                   {index + 1}. {t(`beliefs.${key}.title`)}
                 </h3>
-                <p className="text-gray-600 text-sm leading-relaxed">
+                <p className="text-gray-600 text-base leading-relaxed">
                   {t(`beliefs.${key}.description`)}
                 </p>
               </div>
@@ -70,9 +70,9 @@ export default async function WorshipPage({
       {/* Main Service */}
       <Section variant="white">
         <Container size="md">
-          <div className="text-center mb-12">
-            <p className="text-gray-500 text-sm mb-2">{t('service.day')}</p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
+          <div className="text-center mb-8">
+            <p className="text-gray-500 text-base mb-2">{t('service.day')}</p>
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
               {t('service.title')}
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
@@ -80,7 +80,7 @@ export default async function WorshipPage({
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 mb-12">
+          <div className="grid md:grid-cols-3 gap-6 mb-8">
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
               <h3 className="font-bold text-gray-900 mb-2">{t('service.timeLabel')}</h3>
               <p className="text-gray-600">{t('service.timeValue')}</p>
@@ -100,7 +100,7 @@ export default async function WorshipPage({
       {/* Other Gatherings */}
       <Section variant="gray" id="schedule">
         <Container size="md">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-2">
               {t('gatherings.title')}
             </h2>
@@ -112,10 +112,10 @@ export default async function WorshipPage({
               <h3 className="font-bold text-gray-900 mb-2">
                 {t('gatherings.bibleStudy.title')}
               </h3>
-              <p className="text-gray-500 text-sm mb-3">
+              <p className="text-gray-500 text-base mb-3">
                 {t('gatherings.bibleStudy.schedule')}
               </p>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-base">
                 {t('gatherings.bibleStudy.description')}
               </p>
             </div>
@@ -124,10 +124,10 @@ export default async function WorshipPage({
               <h3 className="font-bold text-gray-900 mb-2">
                 {t('gatherings.bsf.title')}
               </h3>
-              <p className="text-gray-500 text-sm mb-3">
+              <p className="text-gray-500 text-base mb-3">
                 {t('gatherings.bsf.schedule')}
               </p>
-              <p className="text-gray-600 text-sm">
+              <p className="text-gray-600 text-base">
                 {t('gatherings.bsf.description')}
               </p>
             </div>
@@ -138,7 +138,7 @@ export default async function WorshipPage({
       {/* Agape Love */}
       <Section variant="gray">
         <Container size="sm">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-2">
               {t('agape.title')}
             </h2>
@@ -149,7 +149,7 @@ export default async function WorshipPage({
             text={t('agape.scripture')}
             reference={t('agape.reference')}
             centered
-            className="mb-12"
+            className="mb-8"
           />
 
           <div className="space-y-6 text-gray-600 leading-relaxed text-center">

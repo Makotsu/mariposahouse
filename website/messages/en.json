@@ -13,8 +13,8 @@
     "hero": {
       "title": "Mariposa House",
       "subtitle": "Mariposa House Church",
-      "tagline": "Transformation and New Life - Like a Butterfly",
-      "description": "Sharing the joy of being made new in Christ",
+      "tagline": "Life Transformation — Made New in Christ",
+      "description": "Sharing the joy of becoming a new creation in Christ",
       "ctaWorship": "Worship Info",
       "ctaFirstVisit": "First Visit",
       "ctaContact": "Contact Us"
@@ -26,13 +26,13 @@
     },
     "worship": {
       "title": "Worship Service",
-      "description": "Every Sunday, we gather online to worship God together, study His Word, and enjoy fellowship. Everyone is welcome!",
+      "description": "Every Sunday, we gather online to worship the Lord together, hear His Word, and enjoy prayer and fellowship. Everyone is warmly welcome!",
       "time": "Every Sunday 10:00 AM - 12:00 PM (Online)",
       "details": "Learn More"
     },
     "cta": {
-      "title": "We're Waiting for You",
-      "description": "Mariposa House welcomes everyone. Let's worship together, grow together, and share God's love together.",
+      "title": "We Look Forward to Meeting You",
+      "description": "Mariposa House welcomes everyone. Let's worship the Lord together, grow together, and walk in God's love.",
       "contact": "Contact Us"
     }
   },
@@ -44,7 +44,7 @@
       "description": "Mariposa House is a community sharing the joy of becoming 'a new creation' in Christ.",
       "message1": "Thank you for visiting Mariposa House.",
       "message2": "We warmly welcome you.",
-      "message3": "Whether this is your first time at church, or you're returning after a while,",
+      "message3": "Whether this is your first time at church or you're returning after a while,",
       "message4": "whatever your background, please come as you are."
     },
     "mariposa": {
@@ -53,8 +53,8 @@
       "content1Prefix": "\"Mariposa\" means ",
       "butterfly": "butterfly",
       "content1Suffix": " in Spanish.",
-      "content2": "A butterfly transforms from a caterpillar, through a chrysalis, into a beautiful winged creature. This remarkable metamorphosis symbolizes our process of becoming \"a new creation\" in Christ.",
-      "content3": "Leaving behind our old selves, growing in God's love, and eventually being transformed into the likeness of Christ — this is the vision of Mariposa House.",
+      "content2": "A butterfly transforms from a caterpillar, through a chrysalis, into a beautiful winged creature. This remarkable metamorphosis symbolizes the grace of becoming \"a new creation\" in Christ.",
+      "content3": "Dying to our old selves, growing in God's love, and being daily transformed into the likeness of Christ — this is the vision of Mariposa House.",
       "scripture": "\"And we all, who with unveiled faces contemplate the Lord's glory, are being transformed into his image with ever-increasing glory.\"",
       "scriptureRef": "2 Corinthians 3:18"
     },
@@ -77,8 +77,8 @@
       }
     },
     "cta": {
-      "title": "We look forward to meeting you",
-      "description": "If you have any questions, please feel free to contact us."
+      "title": "We Look Forward to Meeting You",
+      "description": "If you have any questions or interest, please feel free to contact us."
     }
   },
   "Worship": {
@@ -86,26 +86,26 @@
     "pageSubtitle": "Faith & Worship",
     "beliefs": {
       "title": "What We Believe",
-      "intro": "Mariposa House stands on historic Christian faith based on the Bible.",
+      "intro": "Mariposa House stands firmly on historic, orthodox Christian faith based on the Bible.",
       "bible": {
         "title": "The Bible",
-        "description": "The Bible is the inspired Word of God and the sole authority for faith and practice."
+        "description": "The 66 books of the Bible are the inspired, inerrant Word of God and the sole authority for faith and practice."
       },
       "trinity": {
         "title": "The Trinity",
-        "description": "We believe in one God eternally existing in three persons: Father, Son, and Holy Spirit."
+        "description": "We believe in one God eternally existing in three persons: Father, Son, and Holy Spirit — the triune God."
       },
       "jesus": {
         "title": "Jesus Christ",
-        "description": "Jesus Christ is the Son of God, born of the Virgin Mary, died on the cross for our sins, and rose again on the third day."
+        "description": "Jesus Christ is fully God and fully man, born of the Virgin Mary, died on the cross as our substitute for sin, and rose again on the third day."
       },
       "salvation": {
         "title": "Salvation",
-        "description": "All people are sinners and can only be saved by faith in Jesus Christ."
+        "description": "All people are separated from God by sin, but by God's grace, we are saved through faith in Jesus Christ alone."
       },
       "holySpirit": {
         "title": "The Holy Spirit",
-        "description": "The Holy Spirit dwells in believers, guiding and empowering them."
+        "description": "The Holy Spirit dwells in believers, illuminating truth, guiding, and transforming us into the likeness of Christ."
       }
     },
     "service": {
@@ -113,7 +113,7 @@
       "day": "Every Sunday",
       "time": "Every Sunday 10:00 AM - 12:00 PM",
       "format": "Online",
-      "description": "We worship God together through praise, prayer, Bible teaching, and fellowship.",
+      "description": "We worship the Lord together through praise, prayer, the proclamation of the Word, and fellowship.",
       "timeLabel": "Time",
       "timeValue": "10:00 AM - 12:00 PM (Online)",
       "contentLabel": "Content",
@@ -127,24 +127,24 @@
       "bibleStudy": {
         "title": "Wednesday Bible Study",
         "schedule": "Every Wednesday",
-        "description": "We gather every Wednesday to study the Bible deeply together."
+        "description": "We gather every Wednesday to carefully study the Bible and deepen our understanding."
       },
       "bsf": {
         "title": "BSF Gathering",
         "schedule": "BSF",
-        "description": "Through BSF (Bible Study Fellowship), we grow in faith together."
+        "description": "Through BSF (Bible Study Fellowship), we systematically study the Bible and pursue growth in faith."
       }
     },
     "agape": {
       "title": "Agape Love",
       "subtitle": "Agape Love",
-      "description": "Agape means 'unconditional love' in Greek. Just as God loved us, we are called to love one another.",
+      "description": "Agape means 'self-sacrificial, unconditional love' in Greek. Just as God loved us, loving one another is the Lord's command and our joy.",
       "scripture": "A new command I give you: Love one another. As I have loved you, so you must love one another.",
       "reference": "John 13:34"
     },
     "cta": {
       "title": "Join Us",
-      "description": "First-time visitors are always welcome. Please feel free to contact us."
+      "description": "First-time visitors are warmly welcome. Please feel free to contact us."
     }
   },
   "News": {
@@ -244,7 +244,7 @@
     }
   },
   "Footer": {
-    "description": "Sharing the joy of being made new in Christ",
+    "description": "Sharing the joy of becoming a new creation in Christ",
     "navigation": "Navigation",
     "contact": "Contact",
     "worshipTime": "Worship Time",

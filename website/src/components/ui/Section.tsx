@@ -7,9 +7,9 @@ interface SectionProps extends BaseComponentProps, SectionBackground {
 }
 
 const paddingStyles = {
-  sm: 'py-12',
-  md: 'py-16',
-  lg: 'py-20',
+  sm: 'py-8',
+  md: 'py-12',
+  lg: 'py-16',
 };
 
 const bgStyles = {

@@ -18,11 +18,11 @@ export function CTASection({
   return (
     <Section variant={variant}>
       <Container size="sm" center>
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
           {title}
         </h2>
         {description && (
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-600 mb-6 max-w-xl mx-auto leading-relaxed">
             {description}
           </p>
         )}

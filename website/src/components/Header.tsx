@@ -70,7 +70,7 @@ export default function Header() {
               alt="Mariposa"
               width={32}
               height={32}
-              className="w-8 h-8"
+              className="w-8 h-auto"
             />
             <span className="text-lg font-bold text-gray-900 font-serif">
               Mariposa House
@@ -83,7 +83,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-gray-600 hover:text-gray-900 transition-colors text-sm"
+                className="text-gray-600 hover:text-gray-900 transition-colors text-base"
               >
                 {item.name}
               </Link>
@@ -133,7 +133,7 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setIsOpen(false)}
-                  className="px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded transition-colors text-sm"
+                  className="px-3 py-2 text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded transition-colors text-base"
                 >
                   {item.name}
                 </Link>

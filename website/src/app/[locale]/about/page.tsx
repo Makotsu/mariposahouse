@@ -42,10 +42,10 @@ export default async function AboutPage({
       {/* Welcome Message */}
       <Section variant="gray" padding="md">
         <Container size="sm" center>
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
             {t('welcome.title')}
           </h2>
-          <p className="text-gray-600 leading-relaxed mb-8">
+          <p className="text-gray-600 leading-relaxed mb-6">
             {t('welcome.message1')}<br />
             {t('welcome.message2')}<br />
             {t('welcome.message3')}<br />
@@ -57,10 +57,10 @@ export default async function AboutPage({
       {/* Meaning of Mariposa */}
       <Section variant="white" id="meaning">
         <Container size="md">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6 text-center">
             {t('mariposa.title')}
           </h2>
-          <div className="space-y-4 text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <div className="space-y-3 text-gray-600 leading-relaxed max-w-2xl mx-auto">
             <p>
               {t('mariposa.content1Prefix')}
               <strong className="text-gray-900">{t('mariposa.butterfly')}</strong>
@@ -70,7 +70,7 @@ export default async function AboutPage({
             <p>{t('mariposa.content3')}</p>
           </div>
 
-          <div className="mt-12 max-w-2xl mx-auto">
+          <div className="mt-8 max-w-2xl mx-auto">
             <ScriptureQuote
               text={t('mariposa.scripture')}
               reference={t('mariposa.scriptureRef')}
@@ -83,11 +83,11 @@ export default async function AboutPage({
       {/* Core Scripture */}
       <Section variant="white">
         <Container size="sm">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-12 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-8 text-center">
             {t('scriptures.title')}
           </h2>
 
-          <div className="space-y-8">
+          <div className="space-y-6">
             <div className="scripture-quote">
               <h3 className="font-bold text-gray-900 mb-2">
                 {t('scriptures.galatians.reference')}
@@ -95,7 +95,7 @@ export default async function AboutPage({
               <p className="text-gray-600 leading-relaxed mb-2">
                 {t('scriptures.galatians.text')}
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-base">
                 {t('scriptures.galatians.translation')}
               </p>
             </div>
@@ -107,7 +107,7 @@ export default async function AboutPage({
               <p className="text-gray-600 leading-relaxed mb-2">
                 {t('scriptures.corinthians.text')}
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-base">
                 {t('scriptures.corinthians.translation')}
               </p>
             </div>
@@ -119,7 +119,7 @@ export default async function AboutPage({
               <p className="text-gray-600 leading-relaxed mb-2">
                 {t('scriptures.ephesians.text')}
               </p>
-              <p className="text-gray-400 text-sm">
+              <p className="text-gray-400 text-base">
                 {t('scriptures.ephesians.translation')}
               </p>
             </div>

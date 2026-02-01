@@ -28,7 +28,7 @@ export function HeroSection({
     <Section
       variant="white"
       className={cn(
-        fullHeight ? 'min-h-screen flex items-center justify-center pt-20' : 'pt-32 pb-16',
+        fullHeight ? 'min-h-[75vh] flex items-center justify-center pt-16' : 'pt-24 pb-10',
         className
       )}
     >
@@ -39,11 +39,11 @@ export function HeroSection({
             alt="Mariposa"
             width={butterflySize}
             height={butterflySize}
-            className="mx-auto mb-8"
+            className="mx-auto mb-5"
             priority={priority}
           />
         )}
-        <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-4">
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-3">
           {title}
         </h1>
         {subtitle && (

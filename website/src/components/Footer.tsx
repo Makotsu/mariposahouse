@@ -33,20 +33,20 @@ export default function Footer() {
                 alt="Mariposa"
                 width={28}
                 height={28}
-                className="w-7 h-7"
+                className="w-7 h-auto"
               />
               <span className="text-lg font-bold text-gray-900 font-serif">
                 Mariposa House
               </span>
             </Link>
-            <p className="text-gray-500 text-sm leading-relaxed">
+            <p className="text-gray-500 text-base leading-relaxed">
               {t('description')}
             </p>
           </div>
 
           {/* Navigation Links */}
           <div>
-            <h3 className="font-medium text-gray-900 mb-3 text-sm">
+            <h3 className="font-medium text-gray-900 mb-3 text-base">
               {t('navigation')}
             </h3>
             <ul className="space-y-2">
@@ -54,7 +54,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-gray-700 transition-colors text-sm"
+                    className="text-gray-500 hover:text-gray-700 transition-colors text-base"
                   >
                     {link.name}
                   </Link>
@@ -65,7 +65,7 @@ export default function Footer() {
 
           {/* Connect Links */}
           <div>
-            <h3 className="font-medium text-gray-900 mb-3 text-sm">
+            <h3 className="font-medium text-gray-900 mb-3 text-base">
               {t('contact')}
             </h3>
             <ul className="space-y-2">
@@ -73,7 +73,7 @@ export default function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-gray-700 transition-colors text-sm"
+                    className="text-gray-500 hover:text-gray-700 transition-colors text-base"
                   >
                     {link.name}
                   </Link>
@@ -84,15 +84,15 @@ export default function Footer() {
 
           {/* Service Times */}
           <div>
-            <h3 className="font-medium text-gray-900 mb-3 text-sm">
+            <h3 className="font-medium text-gray-900 mb-3 text-base">
               {t('worshipTime')}
             </h3>
-            <p className="text-gray-500 text-sm">{t('worshipSchedule')}</p>
+            <p className="text-gray-500 text-base">{t('worshipSchedule')}</p>
 
             <div className="mt-6 pt-4 border-t border-gray-200">
               <Link
                 href={`/${locale}/privacy`}
-                className="text-gray-500 hover:text-gray-700 transition-colors text-sm"
+                className="text-gray-500 hover:text-gray-700 transition-colors text-base"
               >
                 {t('privacy')}
               </Link>
@@ -104,7 +104,7 @@ export default function Footer() {
       {/* Bottom Bar */}
       <div className="border-t border-gray-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
-          <p className="text-gray-400 text-xs text-center">
+          <p className="text-gray-400 text-base text-center">
             &copy; {new Date().getFullYear()} Mariposa House Church. {t('copyright')}
           </p>
         </div>

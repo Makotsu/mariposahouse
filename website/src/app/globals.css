@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Scripture quote styling */
 .scripture-quote {
   position: relative;
-  padding: 2rem 3rem;
+  padding: 1.5rem 2rem;
   font-style: italic;
   background: var(--gray-50);
   border-left: 3px solid var(--gray-300);
@@ -176,7 +176,7 @@ h1, h2, h3, h4, h5, h6 {
 .lang-toggle button {
   padding: 0.25rem 0.75rem;
   border-radius: 0.25rem;
-  font-size: 0.875rem;
+  font-size: 1rem;
   transition: all 0.2s ease;
   color: var(--gray-600);
 }

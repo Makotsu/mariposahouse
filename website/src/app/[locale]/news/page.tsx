@@ -35,60 +35,57 @@ export default async function NewsPage({
   const posts = await getPosts({ perPage: 20 });
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen pt-16 bg-white">
       {/* Hero */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <Image
             src="/butterfly.png"
             alt="Mariposa"
-            width={120}
-            height={120}
-            className="mx-auto mb-8"
+            width={100}
+            height={100}
+            className="mx-auto mb-5"
           />
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-3">
             {t('pageTitle')}
           </h1>
-          <p className="text-xl text-gray-500">{t('pageSubtitle')}</p>
+          <p className="text-lg text-gray-500">{t('pageSubtitle')}</p>
         </div>
       </section>
 
       {/* News List */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length > 0 ? (
             <div className="space-y-6">
               {posts.map((post) => (
-                <article key={post.id} className="card p-6">
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {post.categories.map((cat) => (
-                      <span
-                        key={cat.id}
-                        className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded"
-                      >
-                        {cat.name}
-                      </span>
-                    ))}
-                  </div>
-                  <Link href={`/${locale}/news/${post.slug}`} className="group">
+                <Link key={post.id} href={`/${locale}/news/${post.slug}`} className="block">
+                  <article className="card p-6 hover:shadow-lg transition-shadow cursor-pointer">
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {post.categories.map((cat) => (
+                        <span
+                          key={cat.id}
+                          className="px-2 py-1 bg-gray-100 text-gray-600 text-base font-medium rounded"
+                        >
+                          {cat.name}
+                        </span>
+                      ))}
+                    </div>
                     <h2 className="text-xl font-bold text-gray-900 group-hover:text-gray-600 transition-colors mb-3 font-serif">
                       {post.title}
                     </h2>
-                  </Link>
-                  <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
-                  <div className="flex items-center justify-between">
-                    <time className="text-sm text-gray-400">{post.formattedDate}</time>
-                    <Link
-                      href={`/${locale}/news/${post.slug}`}
-                      className="text-gray-600 hover:text-gray-900 font-medium text-sm transition-colors inline-flex items-center gap-1"
-                    >
-                      {t('readMore')}
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </article>
+                    <p className="text-gray-600 mb-4 line-clamp-2">{post.excerpt}</p>
+                    <div className="flex items-center justify-between">
+                      <time className="text-base text-gray-400">{post.formattedDate}</time>
+                      <span className="text-gray-600 font-medium text-base inline-flex items-center gap-1">
+                        {t('readMore')}
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
+                    </div>
+                  </article>
+                </Link>
               ))}
             </div>
           ) : (
@@ -100,12 +97,12 @@ export default async function NewsPage({
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
             {isJa ? 'ご質問はお気軽に' : 'Questions?'}
           </h2>
-          <p className="text-gray-600 mb-8">
+          <p className="text-gray-600 mb-6">
             {isJa
               ? '詳しい情報やご質問がありましたら、お問い合わせください。'
               : 'For more information or questions, please contact us.'}

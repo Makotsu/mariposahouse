@@ -22,34 +22,34 @@ export default async function Home({
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section - Enhanced */}
-      <section className="min-h-screen flex items-center justify-center pt-20">
+      <section className="min-h-[75vh] flex items-center justify-center pt-16">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
-            {/* Butterfly Icon - Enlarged */}
-            <div className="mb-10">
+            {/* Butterfly Icon */}
+            <div className="mb-6">
               <Image
                 src="/butterfly.png"
                 alt="Mariposa"
-                width={200}
-                height={200}
+                width={160}
+                height={160}
                 className="mx-auto drop-shadow-lg"
                 priority
               />
             </div>
 
             {/* Main heading */}
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-900 font-serif mb-4">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 font-serif mb-3">
               {t('hero.title')}
             </h1>
-            <p className="text-xl md:text-2xl text-gray-600 font-serif mb-4">
+            <p className="text-lg md:text-xl text-gray-600 font-serif mb-3">
               {t('hero.subtitle')}
             </p>
 
             {/* Tagline */}
-            <p className="text-lg text-gray-500 mb-6 max-w-2xl mx-auto">
+            <p className="text-base text-gray-500 mb-4 max-w-2xl mx-auto">
               {t('hero.tagline')}
             </p>
-            <p className="text-base text-gray-400 mb-12 max-w-xl mx-auto">
+            <p className="text-base text-gray-400 mb-8 max-w-xl mx-auto">
               {t('hero.description')}
             </p>
 
@@ -83,15 +83,15 @@ export default async function Home({
       </section>
 
       {/* Latest News Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between mb-10">
+          <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900 font-serif">
               {t('news.title')}
             </h2>
             <Link
               href={`/${locale}/news`}
-              className="text-gray-600 hover:text-gray-900 text-sm transition-colors inline-flex items-center gap-1"
+              className="text-gray-600 hover:text-gray-900 text-base transition-colors inline-flex items-center gap-1"
             >
               {t('news.viewAll')}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -112,7 +112,7 @@ export default async function Home({
                     {post.categories.map((cat) => (
                       <span
                         key={cat.id}
-                        className="px-2 py-0.5 bg-gray-100 text-gray-600 text-xs font-medium rounded"
+                        className="px-2 py-1 bg-gray-100 text-gray-600 text-base font-medium rounded"
                       >
                         {cat.name}
                       </span>
@@ -121,10 +121,10 @@ export default async function Home({
                   <h3 className="font-bold text-gray-900 group-hover:text-gray-600 transition-colors mb-2 line-clamp-2">
                     {post.title}
                   </h3>
-                  <p className="text-gray-500 text-sm mb-3 line-clamp-2">
+                  <p className="text-gray-500 text-base mb-3 line-clamp-2">
                     {post.excerpt}
                   </p>
-                  <time className="text-xs text-gray-400">{post.formattedDate}</time>
+                  <time className="text-base text-gray-400">{post.formattedDate}</time>
                 </Link>
               ))}
             </div>
@@ -135,16 +135,16 @@ export default async function Home({
       </section>
 
       {/* Worship Info Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
             {t('worship.title')}
           </h2>
-          <p className="text-gray-600 mb-8 leading-relaxed">
+          <p className="text-gray-600 mb-6 leading-relaxed">
             {t('worship.description')}
           </p>
 
-          <div className="flex justify-center mb-8">
+          <div className="flex justify-center mb-6">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center flex-shrink-0">
                 <svg
@@ -177,12 +177,12 @@ export default async function Home({
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
+          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
             {t('cta.title')}
           </h2>
-          <p className="text-gray-600 mb-8 max-w-xl mx-auto leading-relaxed">
+          <p className="text-gray-600 mb-6 max-w-xl mx-auto leading-relaxed">
             {t('cta.description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
