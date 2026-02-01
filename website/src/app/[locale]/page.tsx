@@ -17,7 +17,7 @@ export default async function Home({
   const tNav = await getTranslations('Navigation');
 
   // 最新のお知らせを3件取得
-  const latestNews = await getPosts({ perPage: 3 });
+  const latestNews = await getPosts({ perPage: 3, locale });
 
   return (
     <div className="min-h-screen bg-white">

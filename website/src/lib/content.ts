@@ -4,7 +4,8 @@
  */
 
 import * as wordpress from './wordpress';
-import { mockPosts, mockCategories } from './mock-data';
+import { getMockPosts, getMockCategories } from './mock-data';
+import { Locale } from '@/i18n/config';
 
 // モックモードかどうか
 const USE_MOCK = process.env.USE_MOCK_DATA === 'true';
@@ -48,8 +49,10 @@ function transformPost(wpPost: wordpress.WPPost): Post {
 /**
  * モック投稿を統一フォーマットに変換
  */
-function transformMockPost(mockPost: wordpress.WPPost): Post {
+function transformMockPost(mockPost: wordpress.WPPost, locale: Locale = 'ja'): Post {
+  const mockCategories = getMockCategories(locale);
   const category = mockCategories.find(c => mockPost.categories.includes(c.id));
+  const dateLocale = locale === 'ja' ? 'ja-JP' : 'en-US';
   return {
     id: mockPost.id,
     slug: mockPost.slug,
@@ -57,7 +60,7 @@ function transformMockPost(mockPost: wordpress.WPPost): Post {
     content: mockPost.content.rendered,
     excerpt: wordpress.stripHtml(mockPost.excerpt.rendered),
     date: mockPost.date,
-    formattedDate: wordpress.formatDate(mockPost.date),
+    formattedDate: wordpress.formatDate(mockPost.date, dateLocale),
     categories: category ? [{ id: category.id, name: category.name, slug: category.slug }] : [],
     featuredImage: null,
   };
@@ -72,8 +75,13 @@ export async function getPosts(params?: {
   perPage?: number;
   page?: number;
   category?: string;
+  locale?: Locale;
 }): Promise<Post[]> {
+  const locale = params?.locale || 'ja';
+
   if (USE_MOCK) {
+    const mockPosts = getMockPosts(locale);
+    const mockCategories = getMockCategories(locale);
     let posts = [...mockPosts];
 
     // カテゴリフィルタ
@@ -90,7 +98,7 @@ export async function getPosts(params?: {
     const start = (page - 1) * perPage;
     posts = posts.slice(start, start + perPage);
 
-    return posts.map(transformMockPost);
+    return posts.map(p => transformMockPost(p, locale));
   }
 
   try {
@@ -112,17 +120,19 @@ export async function getPosts(params?: {
   } catch (error) {
     console.error('Failed to fetch posts from WordPress:', error);
     // フォールバック: モックデータを返す
-    return mockPosts.map(transformMockPost);
+    const mockPosts = getMockPosts(locale);
+    return mockPosts.map(p => transformMockPost(p, locale));
   }
 }
 
 /**
  * スラッグで投稿を取得
  */
-export async function getPostBySlug(slug: string): Promise<Post | null> {
+export async function getPostBySlug(slug: string, locale: Locale = 'ja'): Promise<Post | null> {
   if (USE_MOCK) {
+    const mockPosts = getMockPosts(locale);
     const post = mockPosts.find(p => p.slug === slug);
-    return post ? transformMockPost(post) : null;
+    return post ? transformMockPost(post, locale) : null;
   }
 
   try {
@@ -130,8 +140,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
     return wpPost ? transformPost(wpPost) : null;
   } catch (error) {
     console.error('Failed to fetch post from WordPress:', error);
+    const mockPosts = getMockPosts(locale);
     const post = mockPosts.find(p => p.slug === slug);
-    return post ? transformMockPost(post) : null;
+    return post ? transformMockPost(post, locale) : null;
   }
 }
 
@@ -140,7 +151,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 /**
  * カテゴリ一覧を取得
  */
-export async function getCategories(): Promise<Category[]> {
+export async function getCategories(locale: Locale = 'ja'): Promise<Category[]> {
+  const mockCategories = getMockCategories(locale);
+
   if (USE_MOCK) {
     return mockCategories.map(c => ({
       id: c.id,

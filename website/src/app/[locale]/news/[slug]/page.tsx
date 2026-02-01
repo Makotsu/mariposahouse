@@ -31,7 +31,7 @@ export async function generateMetadata({
   params: Promise<{ locale: Locale; slug: string }>;
 }) {
   const { locale, slug } = await params;
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(slug, locale);
 
   if (!post) {
     return {
@@ -57,7 +57,7 @@ export default async function NewsDetailPage({
   const tContact = await getTranslations('Contact');
 
   const isJa = locale === 'ja';
-  const post = await getPostBySlug(slug);
+  const post = await getPostBySlug(slug, locale);
 
   if (!post) {
     notFound();

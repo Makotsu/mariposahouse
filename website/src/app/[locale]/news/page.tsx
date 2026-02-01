@@ -32,7 +32,7 @@ export default async function NewsPage({
   const tContact = await getTranslations('Contact');
 
   const isJa = locale === 'ja';
-  const posts = await getPosts({ perPage: 20 });
+  const posts = await getPosts({ perPage: 20, locale });
 
   return (
     <div className="min-h-screen pt-16 bg-white">
