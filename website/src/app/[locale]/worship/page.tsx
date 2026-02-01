@@ -1,8 +1,11 @@
-import Link from "next/link";
-import Image from "next/image";
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Locale } from "@/i18n/config";
 import type { Metadata } from "next";
+import { HeroSection } from '@/components/sections/HeroSection';
+import { CTASection } from '@/components/sections/CTASection';
+import { Section } from '@/components/ui/Section';
+import { Container } from '@/components/ui/Container';
+import { ScriptureQuote } from '@/components/ui/ScriptureQuote';
 
 export async function generateMetadata({
   params,
@@ -29,87 +32,46 @@ export default async function WorshipPage({
   const tAbout = await getTranslations('About');
   const tContact = await getTranslations('Contact');
 
-  const isJa = locale === 'ja';
+  const beliefs = ['bible', 'trinity', 'jesus', 'salvation', 'holySpirit'] as const;
 
   return (
-    <div className="min-h-screen pt-20 bg-white">
+    <div className="min-h-screen bg-white">
       {/* Hero */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Image
-            src="/butterfly.png"
-            alt="Mariposa"
-            width={120}
-            height={120}
-            className="mx-auto mb-8"
-          />
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 font-serif mb-4">
-            {t('pageTitle')}
-          </h1>
-          <p className="text-xl text-gray-500">{t('pageSubtitle')}</p>
-        </div>
-      </section>
+      <HeroSection
+        title={t('pageTitle')}
+        subtitle={t('pageSubtitle')}
+      />
 
       {/* Core Beliefs */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="gray">
+        <Container size="sm">
           <div className="text-center mb-16">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-4">
               {t('beliefs.title')}
             </h2>
-            <p className="text-gray-600">
-              {isJa
-                ? 'マリポサハウスは、聖書に基づく歴史的なキリスト教信仰に立っています。'
-                : 'Mariposa House stands on historic Christian faith based on the Bible.'}
-            </p>
+            <p className="text-gray-600">{t('beliefs.intro')}</p>
           </div>
 
           <div className="space-y-6">
-            <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-3">1. {t('beliefs.bible.title')}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {t('beliefs.bible.description')}
-              </p>
-            </div>
-
-            <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-3">2. {t('beliefs.trinity.title')}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {t('beliefs.trinity.description')}
-              </p>
-            </div>
-
-            <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-3">3. {t('beliefs.jesus.title')}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {t('beliefs.jesus.description')}
-              </p>
-            </div>
-
-            <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-3">4. {t('beliefs.salvation.title')}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {t('beliefs.salvation.description')}
-              </p>
-            </div>
-
-            <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-3">5. {t('beliefs.holySpirit.title')}</h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                {t('beliefs.holySpirit.description')}
-              </p>
-            </div>
+            {beliefs.map((key, index) => (
+              <div key={key} className="card p-6">
+                <h3 className="font-bold text-gray-900 mb-3">
+                  {index + 1}. {t(`beliefs.${key}.title`)}
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed">
+                  {t(`beliefs.${key}.description`)}
+                </p>
+              </div>
+            ))}
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Main Service */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="white">
+        <Container size="md">
           <div className="text-center mb-12">
-            <p className="text-gray-500 text-sm mb-2">
-              {isJa ? '毎週日曜日' : 'Every Sunday'}
-            </p>
+            <p className="text-gray-500 text-sm mb-2">{t('service.day')}</p>
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
               {t('service.title')}
             </h2>
@@ -120,41 +82,29 @@ export default async function WorshipPage({
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">
-                {isJa ? '時間' : 'Time'}
-              </h3>
-              <p className="text-gray-600">
-                {isJa ? '10:00 - 12:00（オンライン）' : '10:00 AM - 12:00 PM (Online)'}
-              </p>
+              <h3 className="font-bold text-gray-900 mb-2">{t('service.timeLabel')}</h3>
+              <p className="text-gray-600">{t('service.timeValue')}</p>
             </div>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">
-                {isJa ? '内容' : 'Content'}
-              </h3>
-              <p className="text-gray-600">
-                {isJa ? '賛美・祈り・聖書メッセージ' : 'Praise, Prayer, Bible Message'}
-              </p>
+              <h3 className="font-bold text-gray-900 mb-2">{t('service.contentLabel')}</h3>
+              <p className="text-gray-600">{t('service.contentValue')}</p>
             </div>
             <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 text-center">
-              <h3 className="font-bold text-gray-900 mb-2">
-                {isJa ? '対象' : 'Welcome'}
-              </h3>
-              <p className="text-gray-600">
-                {isJa ? 'どなたでも歓迎' : 'Everyone is welcome'}
-              </p>
+              <h3 className="font-bold text-gray-900 mb-2">{t('service.welcomeLabel')}</h3>
+              <p className="text-gray-600">{t('service.welcomeValue')}</p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Other Gatherings */}
-      <section className="py-20 bg-gray-50" id="schedule">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="gray" id="schedule">
+        <Container size="md">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-2">
               {t('gatherings.title')}
             </h2>
-            <p className="text-gray-500">Regular Gatherings</p>
+            <p className="text-gray-500">{t('gatherings.subtitle')}</p>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
@@ -163,7 +113,7 @@ export default async function WorshipPage({
                 {t('gatherings.bibleStudy.title')}
               </h3>
               <p className="text-gray-500 text-sm mb-3">
-                {isJa ? '毎週水曜日' : 'Every Wednesday'}
+                {t('gatherings.bibleStudy.schedule')}
               </p>
               <p className="text-gray-600 text-sm">
                 {t('gatherings.bibleStudy.description')}
@@ -175,60 +125,48 @@ export default async function WorshipPage({
                 {t('gatherings.bsf.title')}
               </h3>
               <p className="text-gray-500 text-sm mb-3">
-                BSF
+                {t('gatherings.bsf.schedule')}
               </p>
               <p className="text-gray-600 text-sm">
                 {t('gatherings.bsf.description')}
               </p>
             </div>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* Agape Love */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Section variant="gray">
+        <Container size="sm">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-2">
               {t('agape.title')}
             </h2>
-            <p className="text-gray-500">Agape Love</p>
+            <p className="text-gray-500">{t('agape.subtitle')}</p>
           </div>
 
-          <blockquote className="scripture-quote text-center mb-12">
-            <p className="text-xl text-gray-700 leading-relaxed mb-4">
-              {t('agape.scripture')}
-            </p>
-            <cite className="text-gray-500 not-italic">— {t('agape.reference')}</cite>
-          </blockquote>
+          <ScriptureQuote
+            text={t('agape.scripture')}
+            reference={t('agape.reference')}
+            centered
+            className="mb-12"
+          />
 
-          <div className="space-y-6 text-gray-600 leading-relaxed">
+          <div className="space-y-6 text-gray-600 leading-relaxed text-center">
             <p>{t('agape.description')}</p>
           </div>
-        </div>
-      </section>
+        </Container>
+      </Section>
 
       {/* CTA */}
-      <section className="py-20 bg-white">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
-            {isJa ? 'ぜひご参加ください' : 'Join Us'}
-          </h2>
-          <p className="text-gray-600 mb-8">
-            {isJa
-              ? '初めての方も大歓迎です。お気軽にお問い合わせください。'
-              : 'First-time visitors are always welcome. Please feel free to contact us.'}
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href={`/${locale}/about`} className="btn-primary">
-              {tAbout('pageTitle')}
-            </Link>
-            <Link href={`/${locale}/contact`} className="btn-secondary">
-              {tContact('pageTitle')}
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTASection
+        title={t('cta.title')}
+        description={t('cta.description')}
+        buttons={[
+          { label: tAbout('pageTitle'), href: `/${locale}/about` },
+          { label: tContact('pageTitle'), href: `/${locale}/contact`, variant: 'secondary' }
+        ]}
+      />
     </div>
   );
 }

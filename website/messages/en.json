@@ -41,14 +41,44 @@
     "pageSubtitle": "About Mariposa House",
     "welcome": {
       "title": "Welcome to Mariposa House",
-      "description": "Mariposa House is a community sharing the joy of becoming 'a new creation' in Christ."
+      "description": "Mariposa House is a community sharing the joy of becoming 'a new creation' in Christ.",
+      "message1": "Thank you for visiting Mariposa House.",
+      "message2": "We warmly welcome you.",
+      "message3": "Whether this is your first time at church, or you're returning after a while,",
+      "message4": "whatever your background, please come as you are."
     },
     "mariposa": {
       "title": "The Meaning of 'Mariposa'",
-      "description": "Mariposa means 'butterfly' in Spanish. The butterfly transforms from a caterpillar through a chrysalis into a beautiful butterfly, symbolizing our faith journey of being transformed and made new in Christ."
+      "description": "Mariposa means 'butterfly' in Spanish. The butterfly transforms from a caterpillar through a chrysalis into a beautiful butterfly, symbolizing our faith journey of being transformed and made new in Christ.",
+      "content1Prefix": "\"Mariposa\" means ",
+      "butterfly": "butterfly",
+      "content1Suffix": " in Spanish.",
+      "content2": "A butterfly transforms from a caterpillar, through a chrysalis, into a beautiful winged creature. This remarkable metamorphosis symbolizes our process of becoming \"a new creation\" in Christ.",
+      "content3": "Leaving behind our old selves, growing in God's love, and eventually being transformed into the likeness of Christ — this is the vision of Mariposa House.",
+      "scripture": "\"And we all, who with unveiled faces contemplate the Lord's glory, are being transformed into his image with ever-increasing glory.\"",
+      "scriptureRef": "2 Corinthians 3:18"
     },
     "scriptures": {
-      "title": "Core Scriptures"
+      "title": "Core Scriptures",
+      "galatians": {
+        "reference": "Galatians 2:20",
+        "text": "\"I have been crucified with Christ and I no longer live, but Christ lives in me.\"",
+        "translation": "私はキリストとともに十字架につけられました。もはや私が生きているのではなく、キリストが私のうちに生きておられるのです。"
+      },
+      "corinthians": {
+        "reference": "2 Corinthians 5:17",
+        "text": "\"Therefore, if anyone is in Christ, the new creation has come: The old has gone, the new is here!\"",
+        "translation": "ですから、だれでもキリストのうちにあるなら、その人は新しく造られた者です。"
+      },
+      "ephesians": {
+        "reference": "Ephesians 2:10",
+        "text": "\"For we are God's handiwork, created in Christ Jesus to do good works.\"",
+        "translation": "実に、私たちは神の作品であって、良い行いをするためにキリスト・イエスにあって造られたのです。"
+      }
+    },
+    "cta": {
+      "title": "We look forward to meeting you",
+      "description": "If you have any questions, please feel free to contact us."
     }
   },
   "Worship": {
@@ -56,6 +86,7 @@
     "pageSubtitle": "Faith & Worship",
     "beliefs": {
       "title": "What We Believe",
+      "intro": "Mariposa House stands on historic Christian faith based on the Bible.",
       "bible": {
         "title": "The Bible",
         "description": "The Bible is the inspired Word of God and the sole authority for faith and practice."
@@ -79,26 +110,41 @@
     },
     "service": {
       "title": "Sunday Worship",
+      "day": "Every Sunday",
       "time": "Every Sunday 10:00 AM - 12:00 PM",
       "format": "Online",
-      "description": "We worship God together through praise, prayer, Bible teaching, and fellowship."
+      "description": "We worship God together through praise, prayer, Bible teaching, and fellowship.",
+      "timeLabel": "Time",
+      "timeValue": "10:00 AM - 12:00 PM (Online)",
+      "contentLabel": "Content",
+      "contentValue": "Praise, Prayer, Bible Message",
+      "welcomeLabel": "Welcome",
+      "welcomeValue": "Everyone is welcome"
     },
     "gatherings": {
       "title": "Other Gatherings",
+      "subtitle": "Regular Gatherings",
       "bibleStudy": {
         "title": "Wednesday Bible Study",
+        "schedule": "Every Wednesday",
         "description": "We gather every Wednesday to study the Bible deeply together."
       },
       "bsf": {
         "title": "BSF Gathering",
+        "schedule": "BSF",
         "description": "Through BSF (Bible Study Fellowship), we grow in faith together."
       }
     },
     "agape": {
       "title": "Agape Love",
+      "subtitle": "Agape Love",
       "description": "Agape means 'unconditional love' in Greek. Just as God loved us, we are called to love one another.",
       "scripture": "A new command I give you: Love one another. As I have loved you, so you must love one another.",
       "reference": "John 13:34"
+    },
+    "cta": {
+      "title": "Join Us",
+      "description": "First-time visitors are always welcome. Please feel free to contact us."
     }
   },
   "News": {

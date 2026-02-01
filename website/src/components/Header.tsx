@@ -2,13 +2,16 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useTranslations, useLocale } from 'next-intl';
 import { usePathname, useRouter } from 'next/navigation';
+import { useScrollEffect } from '@/hooks/useScrollEffect';
+import { IMAGES } from '@/lib/constants';
+import { cn } from '@/lib/utils';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  const isScrolled = useScrollEffect(10);
   const t = useTranslations('Navigation');
   const locale = useLocale();
   const pathname = usePathname();
@@ -22,34 +25,48 @@ export default function Header() {
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
-  // Scroll detection for background blur
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  // Language switch handler
   const switchLocale = (newLocale: string) => {
     const pathWithoutLocale = pathname.replace(`/${locale}`, '') || '/';
     router.push(`/${newLocale}${pathWithoutLocale}`);
     setIsOpen(false);
   };
 
+  const LanguageToggle = ({ className }: { className?: string }) => (
+    <div
+      className={cn('lang-toggle', className)}
+      role="group"
+      aria-label={t('languageSelector')}
+    >
+      <button
+        onClick={() => switchLocale('ja')}
+        className={locale === 'ja' ? 'active' : ''}
+        aria-pressed={locale === 'ja'}
+      >
+        日本語
+      </button>
+      <button
+        onClick={() => switchLocale('en')}
+        className={locale === 'en' ? 'active' : ''}
+        aria-pressed={locale === 'en'}
+      >
+        EN
+      </button>
+    </div>
+  );
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 border-b border-gray-100 transition-all duration-300 ${
+      className={cn(
+        'fixed top-0 left-0 right-0 z-50 border-b border-gray-100 transition-all duration-300',
         isScrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-white'
-      }`}
+      )}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center gap-2">
             <Image
-              src="/butterfly.png"
+              src={IMAGES.butterfly}
               alt="Mariposa"
               width={32}
               height={32}
@@ -71,28 +88,7 @@ export default function Header() {
                 {item.name}
               </Link>
             ))}
-
-            {/* Language Toggle */}
-            <div
-              className="lang-toggle ml-2"
-              role="group"
-              aria-label={t('languageSelector')}
-            >
-              <button
-                onClick={() => switchLocale('ja')}
-                className={locale === 'ja' ? 'active' : ''}
-                aria-pressed={locale === 'ja'}
-              >
-                日本語
-              </button>
-              <button
-                onClick={() => switchLocale('en')}
-                className={locale === 'en' ? 'active' : ''}
-                aria-pressed={locale === 'en'}
-              >
-                EN
-              </button>
-            </div>
+            <LanguageToggle className="ml-2" />
           </div>
 
           {/* Mobile menu button */}
@@ -143,26 +139,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="px-3 py-2">
-                <div
-                  className="lang-toggle inline-flex"
-                  role="group"
-                  aria-label={t('languageSelector')}
-                >
-                  <button
-                    onClick={() => switchLocale('ja')}
-                    className={locale === 'ja' ? 'active' : ''}
-                    aria-pressed={locale === 'ja'}
-                  >
-                    日本語
-                  </button>
-                  <button
-                    onClick={() => switchLocale('en')}
-                    className={locale === 'en' ? 'active' : ''}
-                    aria-pressed={locale === 'en'}
-                  >
-                    EN
-                  </button>
-                </div>
+                <LanguageToggle className="inline-flex" />
               </div>
             </div>
           </div>

@@ -41,14 +41,44 @@
     "pageSubtitle": "About Mariposa House",
     "welcome": {
       "title": "ようこそ、マリポサハウスへ",
-      "description": "マリポサハウスは、キリストにあって「新しく造られた者」となる喜びを分かち合うコミュニティです。"
+      "description": "マリポサハウスは、キリストにあって「新しく造られた者」となる喜びを分かち合うコミュニティです。",
+      "message1": "マリポサハウスへお越しいただきありがとうございます。",
+      "message2": "私たちは、あなたとの出会いを心から歓迎します。",
+      "message3": "教会が初めての方、久しぶりの方、どんな背景をお持ちの方でも、",
+      "message4": "ありのままのあなたでお越しください。"
     },
     "mariposa": {
       "title": "「マリポサ」の意味",
-      "description": "マリポサ（Mariposa）はスペイン語で「蝶」を意味します。蝶は幼虫から蛹を経て美しい蝶へと変容する生き物であり、これはキリストにあって新しく造り変えられる私たちの信仰の旅路を象徴しています。"
+      "description": "マリポサ（Mariposa）はスペイン語で「蝶」を意味します。蝶は幼虫から蛹を経て美しい蝶へと変容する生き物であり、これはキリストにあって新しく造り変えられる私たちの信仰の旅路を象徴しています。",
+      "content1Prefix": "「マリポサ」はスペイン語で",
+      "butterfly": "蝶",
+      "content1Suffix": "を意味します。",
+      "content2": "蝶は幼虫から蛹を経て、美しい翅を持つ成虫へと変容する生き物です。この驚くべき変態は、私たちがキリストにあって「新しく造られる」過程を象徴しています。",
+      "content3": "古い自分を後にし、神の愛の中で成長し、やがてキリストの似姿へと変えられていく — これが私たちマリポサハウスのビジョンです。",
+      "scripture": "「私たちはみな、覆いを取り除かれた顔に、鏡のように主の栄光を映しながら、栄光から栄光へと、主と同じかたちに変えられていきます。」",
+      "scriptureRef": "2コリント 3:18"
     },
     "scriptures": {
-      "title": "中心となる聖句"
+      "title": "中心となる聖句",
+      "galatians": {
+        "reference": "ガラテヤ 2:20",
+        "text": "「私はキリストとともに十字架につけられました。もはや私が生きているのではなく、キリストが私のうちに生きておられるのです。」",
+        "translation": "I have been crucified with Christ. It is no longer I who live, but Christ who lives in me."
+      },
+      "corinthians": {
+        "reference": "2コリント 5:17",
+        "text": "「ですから、だれでもキリストのうちにあるなら、その人は新しく造られた者です。古いものは過ぎ去って、見よ、すべてが新しくなりました。」",
+        "translation": "Therefore, if anyone is in Christ, he is a new creation. The old has passed away; behold, the new has come."
+      },
+      "ephesians": {
+        "reference": "エペソ 2:10",
+        "text": "「実に、私たちは神の作品であって、良い行いをするためにキリスト・イエスにあって造られたのです。」",
+        "translation": "For we are his workmanship, created in Christ Jesus for good works."
+      }
+    },
+    "cta": {
+      "title": "お会いできることを楽しみにしています",
+      "description": "ご質問やご不明な点がありましたら、お気軽にお問い合わせください。"
     }
   },
   "Worship": {
@@ -56,6 +86,7 @@
     "pageSubtitle": "Faith & Worship",
     "beliefs": {
       "title": "私たちの信じること",
+      "intro": "マリポサハウスは、聖書に基づく歴史的なキリスト教信仰に立っています。",
       "bible": {
         "title": "聖書",
         "description": "聖書は神の霊感によって書かれた、信仰と生活の唯一の規範です。"
@@ -79,26 +110,41 @@
     },
     "service": {
       "title": "日曜礼拝",
+      "day": "毎週日曜日",
       "time": "毎週日曜日 10:00 - 12:00",
       "format": "オンライン",
-      "description": "賛美、祈り、聖書のメッセージ、交わりの時間を通して、共に神様を礼拝します。"
+      "description": "賛美、祈り、聖書のメッセージ、交わりの時間を通して、共に神様を礼拝します。",
+      "timeLabel": "時間",
+      "timeValue": "10:00 - 12:00（オンライン）",
+      "contentLabel": "内容",
+      "contentValue": "賛美・祈り・聖書メッセージ",
+      "welcomeLabel": "対象",
+      "welcomeValue": "どなたでも歓迎"
     },
     "gatherings": {
       "title": "その他の集会",
+      "subtitle": "定期的な集まり",
       "bibleStudy": {
         "title": "水曜日の聖書の学び会",
+        "schedule": "毎週水曜日",
         "description": "毎週水曜日に集まり、聖書を深く学ぶ時間です。"
       },
       "bsf": {
         "title": "BSFの集まり",
+        "schedule": "BSF",
         "description": "BSF（Bible Study Fellowship）の学びを通じて、信仰を成長させる時間です。"
       }
     },
     "agape": {
       "title": "アガペーの愛",
+      "subtitle": "Agape Love",
       "description": "アガペーはギリシャ語で「無条件の愛」を意味します。神様が私たちを愛されたように、私たちも互いに愛し合うことが召命です。",
       "scripture": "わたしはあなたがたに新しい戒めを与えます。互いに愛し合いなさい。わたしがあなたがたを愛したように、あなたがたも互いに愛し合いなさい。",
       "reference": "ヨハネ 13:34"
+    },
+    "cta": {
+      "title": "ぜひご参加ください",
+      "description": "初めての方も大歓迎です。お気軽にお問い合わせください。"
     }
   },
   "News": {
