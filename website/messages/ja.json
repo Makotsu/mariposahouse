@@ -85,28 +85,13 @@
     },
     "gatherings": {
       "title": "その他の集会",
-      "shirHashirim": {
-        "title": "Shir ha-Shirim（シール・ハ・シリーム）",
-        "description": "ヘブライ語で「雅歌」を意味する賛美と祈りの集会です。"
+      "bibleStudy": {
+        "title": "水曜日の聖書の学び会",
+        "description": "毎週水曜日に集まり、聖書を深く学ぶ時間です。"
       },
-      "prayer": {
-        "title": "祈祷会",
-        "description": "共に祈り、互いのために執り成す時間です。"
-      },
-      "smallGroup": {
-        "title": "小グループ",
-        "description": "より深い交わりと学びのための少人数のグループです。"
-      }
-    },
-    "discipleship": {
-      "title": "マテタイ・マテテウシン（弟子訓練）",
-      "description": "「マテタイ」はギリシャ語で「弟子」、「マテテウシン」は「弟子とする」を意味します。私たちはイエス様の弟子として成長し、また他の人々を弟子とするために召されています。",
-      "traits": {
-        "title": "弟子の特徴",
-        "obedience": "イエス様に従う",
-        "scripture": "み言葉を学ぶ",
-        "prayer": "祈りの生活",
-        "fellowship": "交わりを大切にする"
+      "bsf": {
+        "title": "BSFの集まり",
+        "description": "BSF（Bible Study Fellowship）の学びを通じて、信仰を成長させる時間です。"
       }
     },
     "agape": {

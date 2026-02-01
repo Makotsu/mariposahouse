@@ -85,28 +85,13 @@
     },
     "gatherings": {
       "title": "Other Gatherings",
-      "shirHashirim": {
-        "title": "Shir ha-Shirim",
-        "description": "A gathering of praise and prayer. 'Shir ha-Shirim' means 'Song of Songs' in Hebrew."
+      "bibleStudy": {
+        "title": "Wednesday Bible Study",
+        "description": "We gather every Wednesday to study the Bible deeply together."
       },
-      "prayer": {
-        "title": "Prayer Meeting",
-        "description": "A time to pray together and intercede for one another."
-      },
-      "smallGroup": {
-        "title": "Small Groups",
-        "description": "Smaller groups for deeper fellowship and study."
-      }
-    },
-    "discipleship": {
-      "title": "Mathetai Matheteushin (Discipleship)",
-      "description": "'Mathetai' means 'disciples' in Greek, and 'Matheteushin' means 'to make disciples.' We are called to grow as disciples of Jesus and to make disciples of others.",
-      "traits": {
-        "title": "Characteristics of a Disciple",
-        "obedience": "Following Jesus",
-        "scripture": "Studying God's Word",
-        "prayer": "A life of prayer",
-        "fellowship": "Valuing community"
+      "bsf": {
+        "title": "BSF Gathering",
+        "description": "Through BSF (Bible Study Fellowship), we grow in faith together."
       }
     },
     "agape": {

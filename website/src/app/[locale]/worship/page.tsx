@@ -13,8 +13,8 @@ export async function generateMetadata({
   return {
     title: locale === 'ja' ? '信仰と礼拝' : 'Faith & Worship',
     description: locale === 'ja'
-      ? 'マリポサハウスの信仰告白、礼拝案内、弟子訓練について'
-      : 'Learn about our beliefs, worship services, and discipleship at Mariposa House',
+      ? 'マリポサハウスの信仰告白と礼拝案内について'
+      : 'Learn about our beliefs and worship services at Mariposa House',
   };
 }
 
@@ -157,87 +157,29 @@ export default async function WorshipPage({
             <p className="text-gray-500">Regular Gatherings</p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="card p-6">
+          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+            <div className="card p-6 text-center">
               <h3 className="font-bold text-gray-900 mb-2">
-                {t('gatherings.shirHashirim.title')}
+                {t('gatherings.bibleStudy.title')}
               </h3>
               <p className="text-gray-500 text-sm mb-3">
-                {isJa ? '雅歌の学び' : 'Song of Songs Study'}
+                {isJa ? '毎週水曜日' : 'Every Wednesday'}
               </p>
               <p className="text-gray-600 text-sm">
-                {t('gatherings.shirHashirim.description')}
+                {t('gatherings.bibleStudy.description')}
               </p>
             </div>
 
-            <div className="card p-6">
+            <div className="card p-6 text-center">
               <h3 className="font-bold text-gray-900 mb-2">
-                {t('gatherings.prayer.title')}
+                {t('gatherings.bsf.title')}
               </h3>
-              <p className="text-gray-500 text-sm mb-3">Prayer Meeting</p>
-              <p className="text-gray-600 text-sm">
-                {t('gatherings.prayer.description')}
+              <p className="text-gray-500 text-sm mb-3">
+                BSF
               </p>
-            </div>
-
-            <div className="card p-6">
-              <h3 className="font-bold text-gray-900 mb-2">
-                {t('gatherings.smallGroup.title')}
-              </h3>
-              <p className="text-gray-500 text-sm mb-3">Small Groups</p>
               <p className="text-gray-600 text-sm">
-                {t('gatherings.smallGroup.description')}
+                {t('gatherings.bsf.description')}
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Discipleship */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <p className="text-gray-500 text-sm mb-2">
-              {isJa ? '弟子訓練' : 'Discipleship'}
-            </p>
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 font-serif mb-6">
-              {t('discipleship.title')}
-            </h2>
-          </div>
-
-          <div className="max-w-2xl mx-auto space-y-6 text-gray-600 leading-relaxed">
-            <p>{t('discipleship.description')}</p>
-          </div>
-
-          <div className="mt-12 max-w-2xl mx-auto">
-            <h3 className="text-xl font-bold text-gray-900 font-serif mb-6 text-center">
-              {t('discipleship.traits.title')}
-            </h3>
-            <div className="grid sm:grid-cols-2 gap-4">
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-bold text-gray-900 mb-1">{t('discipleship.traits.obedience')}</h4>
-                <p className="text-gray-600 text-sm">
-                  {isJa ? '聖書を学び、その教えに従って歩む' : 'Study the Bible and walk according to its teachings'}
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-bold text-gray-900 mb-1">{t('discipleship.traits.prayer')}</h4>
-                <p className="text-gray-600 text-sm">
-                  {isJa ? '絶えず祈り、神との交わりを深める' : 'Pray continually and deepen communion with God'}
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-bold text-gray-900 mb-1">{t('discipleship.traits.scripture')}</h4>
-                <p className="text-gray-600 text-sm">
-                  {isJa ? '互いに愛し合い、仕え合う' : 'Love and serve one another'}
-                </p>
-              </div>
-              <div className="bg-gray-50 rounded-lg p-4">
-                <h4 className="font-bold text-gray-900 mb-1">{t('discipleship.traits.fellowship')}</h4>
-                <p className="text-gray-600 text-sm">
-                  {isJa ? 'キリストの似姿へと変えられていく' : 'Being transformed into the likeness of Christ'}
-                </p>
-              </div>
             </div>
           </div>
         </div>
