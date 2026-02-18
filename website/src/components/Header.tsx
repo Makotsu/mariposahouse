@@ -25,7 +25,6 @@ export default function Header() {
     { name: t('contact'), href: `/${locale}/contact` },
   ];
 
-  // 現在地を判定
   const isActivePath = (href: string) => {
     if (href === `/${locale}`) {
       return pathname === `/${locale}` || pathname === `/${locale}/`;
@@ -65,22 +64,24 @@ export default function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 border-b border-gray-100 transition-all duration-300',
-        isScrolled ? 'bg-white/80 backdrop-blur-md' : 'bg-white'
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-500',
+        isScrolled
+          ? 'bg-white/90 backdrop-blur-lg shadow-sm border-b border-gray-100'
+          : 'bg-white border-b border-gray-100'
       )}
     >
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-18 py-2">
           {/* Logo */}
-          <Link href={`/${locale}`} className="logo-link flex items-center gap-2 py-2">
+          <Link href={`/${locale}`} className="logo-link flex items-center gap-2.5 py-2 group">
             <Image
               src={IMAGES.butterfly}
               alt="Mariposa"
               width={36}
               height={36}
-              className="w-9 h-auto"
+              className="w-9 h-auto transition-transform group-hover:scale-105"
             />
-            <span className="text-lg font-bold text-gray-900 font-serif">
+            <span className="text-lg font-bold text-gray-900 font-serif tracking-wide">
               Mariposa House
             </span>
           </Link>
@@ -94,10 +95,10 @@ export default function Header() {
                   key={item.href}
                   href={item.href}
                   className={cn(
-                    'nav-link px-3 py-2 rounded-md transition-colors text-sm font-medium',
+                    'nav-link px-3.5 py-2 rounded-lg transition-all text-sm font-medium',
                     isActive
-                      ? 'text-gray-900 bg-gray-100'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
+                      ? 'text-accent bg-accent/5'
+                      : 'text-gray-600 hover:text-accent hover:bg-gray-50'
                   )}
                   aria-current={isActive ? 'page' : undefined}
                 >
@@ -105,10 +106,10 @@ export default function Header() {
                 </Link>
               );
             })}
-            <LanguageToggle className="ml-1" />
+            <LanguageToggle className="ml-2" />
           </div>
 
-          {/* Mobile menu button - アクセシビリティ向上: タップ領域を48px以上に */}
+          {/* Mobile menu button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
             className="lg:hidden p-3 min-w-[48px] min-h-[48px] rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
@@ -141,7 +142,7 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation - アクセシビリティ向上: タップ領域拡大、現在地明示 */}
+        {/* Mobile Navigation */}
         {isOpen && (
           <div id="mobile-menu" className="lg:hidden py-4 border-t border-gray-100">
             <div className="flex flex-col gap-1">
@@ -155,8 +156,8 @@ export default function Header() {
                     className={cn(
                       'nav-link px-4 py-4 min-h-[48px] rounded-lg transition-colors text-base font-medium',
                       isActive
-                        ? 'text-gray-900 bg-gray-100 border-l-4 border-gray-900'
-                        : 'text-gray-600 hover:bg-gray-50 hover:text-gray-900'
+                        ? 'text-accent bg-accent/5 border-l-4 border-accent'
+                        : 'text-gray-600 hover:bg-gray-50 hover:text-accent'
                     )}
                     aria-current={isActive ? 'page' : undefined}
                   >

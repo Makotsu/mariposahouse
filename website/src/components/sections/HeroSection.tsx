@@ -28,28 +28,30 @@ export function HeroSection({
     <Section
       variant="white"
       className={cn(
-        fullHeight ? 'min-h-[75vh] flex items-center justify-center pt-16' : 'pt-24 pb-10',
+        fullHeight ? 'gradient-hero min-h-[80vh] flex items-center justify-center pt-16' : 'pt-28 pb-12',
         className
       )}
     >
       <Container size="md" center>
-        {showButterfly && (
-          <Image
-            src={IMAGES.butterfly}
-            alt="Mariposa"
-            width={butterflySize}
-            height={butterflySize}
-            className="mx-auto mb-5"
-            priority={priority}
-          />
-        )}
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-3">
-          {title}
-        </h1>
-        {subtitle && (
-          <p className="text-xl text-gray-500">{subtitle}</p>
-        )}
-        {children}
+        <div className="animate-fade-in-up">
+          {showButterfly && (
+            <Image
+              src={IMAGES.butterfly}
+              alt="Mariposa"
+              width={butterflySize}
+              height={butterflySize}
+              className="mx-auto mb-6 animate-gentle-float"
+              priority={priority}
+            />
+          )}
+          <h1 className="text-3xl md:text-4xl font-bold text-gray-900 font-serif mb-4">
+            {title}
+          </h1>
+          {subtitle && (
+            <p className="text-xl text-gray-500 leading-relaxed">{subtitle}</p>
+          )}
+          {children}
+        </div>
       </Container>
     </Section>
   );

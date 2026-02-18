@@ -23,19 +23,19 @@ export default function Footer() {
   return (
     <footer className="bg-gray-50 border-t border-gray-200">
       {/* Main Footer */}
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10">
           {/* Brand */}
           <div>
-            <Link href={`/${locale}`} className="inline-flex items-center gap-2 mb-4">
+            <Link href={`/${locale}`} className="inline-flex items-center gap-2.5 mb-5 group">
               <Image
                 src="/butterfly.png"
                 alt="Mariposa"
-                width={28}
-                height={28}
-                className="w-7 h-auto"
+                width={32}
+                height={32}
+                className="w-8 h-auto transition-transform group-hover:scale-105"
               />
-              <span className="text-lg font-bold text-gray-900 font-serif">
+              <span className="text-lg font-bold text-gray-900 font-serif tracking-wide">
                 Mariposa House
               </span>
             </Link>
@@ -46,15 +46,15 @@ export default function Footer() {
 
           {/* Navigation Links */}
           <div>
-            <h3 className="font-medium text-gray-900 mb-3 text-base">
+            <h3 className="font-semibold text-gray-900 mb-4 text-base tracking-wide">
               {t('navigation')}
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {footerLinks.about.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-gray-700 transition-colors text-base"
+                    className="text-gray-500 hover:text-accent transition-colors text-base"
                   >
                     {link.name}
                   </Link>
@@ -65,15 +65,15 @@ export default function Footer() {
 
           {/* Connect Links */}
           <div>
-            <h3 className="font-medium text-gray-900 mb-3 text-base">
+            <h3 className="font-semibold text-gray-900 mb-4 text-base tracking-wide">
               {t('contact')}
             </h3>
-            <ul className="space-y-2">
+            <ul className="space-y-3">
               {footerLinks.connect.map((link) => (
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-gray-500 hover:text-gray-700 transition-colors text-base"
+                    className="text-gray-500 hover:text-accent transition-colors text-base"
                   >
                     {link.name}
                   </Link>
@@ -84,15 +84,15 @@ export default function Footer() {
 
           {/* Service Times */}
           <div>
-            <h3 className="font-medium text-gray-900 mb-3 text-base">
+            <h3 className="font-semibold text-gray-900 mb-4 text-base tracking-wide">
               {t('worshipTime')}
             </h3>
             <p className="text-gray-500 text-base">{t('worshipSchedule')}</p>
 
-            <div className="mt-6 pt-4 border-t border-gray-200">
+            <div className="mt-6 pt-5 border-t border-gray-200">
               <Link
                 href={`/${locale}/privacy`}
-                className="text-gray-500 hover:text-gray-700 transition-colors text-base"
+                className="text-gray-500 hover:text-accent transition-colors text-base"
               >
                 {t('privacy')}
               </Link>
@@ -103,7 +103,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-200">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
           <p className="text-gray-400 text-base text-center">
             &copy; {new Date().getFullYear()} Mariposa House Church. {t('copyright')}
           </p>
